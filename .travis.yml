@@ -1,0 +1,10 @@
+sudo: required
+language: tex
+os: linux
+
+install:
+    - bash ./travis-tests/install-nix.sh
+
+script:
+    - . /home/"${USER}"/.nix-profile/etc/profile.d/nix.sh
+    - nix-build -j20 .
