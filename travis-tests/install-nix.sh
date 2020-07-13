@@ -5,6 +5,7 @@ sudo apt-get -y install bzip2 curl bash
 
 cd "${HOME}"
 set +x
+sudo install -d -m755 -o $(id -u) -g $(id -g) /nix
 curl -L https://nixos.org/nix/install | sh
 echo "Installation done!"
 nix --version
