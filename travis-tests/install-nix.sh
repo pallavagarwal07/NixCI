@@ -5,10 +5,7 @@ sudo apt-get -y install bzip2 curl bash
 
 cd "${HOME}"
 set +x
-echo "set +x" > script.sh
-curl https://nixos.org/nix/install >> script.sh
-cat script.sh
-bash script.sh
+curl -L https://nixos.org/nix/install | sh
 echo "Installation done!"
 nix --version
 tree "${HOME}"/.n*
