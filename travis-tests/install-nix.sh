@@ -10,7 +10,6 @@ curl -L https://nixos.org/nix/install | sh
 . /home/user/.nix-profile/etc/profile.d/nix.sh
 echo "Installation done!"
 nix --version
-tree "${HOME}"/.n*
 mkdir -p ${HOME}/.nixpkgs
 echo '{
   nix.binaryCaches = ["http://hydra.nixos.org/" "http://cache.nixos.org/"];
